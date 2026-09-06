@@ -2,14 +2,26 @@
 
 :root {
   --background: #0b132b;
+  --background-deep: #0b192c;
   --foreground: #ffffff;
   --card: #1c2541;
   --card-foreground: #ffffff;
   --muted: #94a3b8;
+  --muted-foreground: #94a3b8;
+  --primary: #5bc0be;
+  --primary-foreground: #0b132b;
   --accent: #5bc0be;
   --accent-foreground: #0b132b;
-  --border: rgb(148 163 184 / 0.2);
+  --secondary: #243153;
+  --secondary-foreground: #ffffff;
+  --destructive: #f87171;
+  --destructive-foreground: #0b132b;
+  --border: rgb(148 163 184 / 0.22);
+  --input: rgb(148 163 184 / 0.28);
+  --ring: #5bc0be;
   --radius: 0.5rem;
+  --elevation-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.18);
+  --elevation-shadow-md: 0 12px 30px rgb(0 0 0 / 0.2);
 
   font-family: Inter, system-ui, sans-serif;
   color: var(--foreground);
@@ -22,16 +34,28 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-deep: var(--background-deep);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
+  --shadow-sm: var(--elevation-shadow-sm);
+  --shadow-md: var(--elevation-shadow-md);
 }
 
 * {
@@ -43,9 +67,45 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: var(--background);
+  background: var(--background-deep);
 }
 
 #root {
   min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+@utility page-glow {
+  background-color: var(--background);
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgb(91 192 190 / 0.1),
+    transparent 34rem
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
