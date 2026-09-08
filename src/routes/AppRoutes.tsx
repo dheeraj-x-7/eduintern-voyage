@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
+import { HeroSection } from '@/components/common/HeroSection'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
-  { path: '/', title: 'Welcome to EduIntern Voyage' },
   { path: '/academics', title: 'Academics' },
   { path: '/courses', title: 'Courses' },
   { path: '/internships', title: 'Internships' },
@@ -16,6 +16,7 @@ const routePlaceholders = [
 export function AppRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<HeroSection />} />
       {routePlaceholders.map((route) => (
         <Route
           key={route.path}

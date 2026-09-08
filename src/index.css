@@ -99,6 +99,101 @@ input:focus-visible {
   );
 }
 
+@keyframes hero-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes journey-step {
+  0%,
+  22% {
+    border-color: rgb(91 192 190 / 0.56);
+    background-color: rgb(91 192 190 / 0.08);
+    box-shadow: 0 0 0 1px rgb(91 192 190 / 0.08), 0 8px 24px rgb(91 192 190 / 0.08);
+  }
+  30%,
+  100% {
+    border-color: var(--border);
+    background-color: rgb(11 19 43 / 0.35);
+    box-shadow: none;
+  }
+}
+
+@keyframes journey-connector {
+  0%,
+  24% {
+    color: var(--primary);
+    opacity: 0.9;
+  }
+  32%,
+  100% {
+    color: var(--muted-foreground);
+    opacity: 0.7;
+  }
+}
+
+.hero-entrance {
+  animation: hero-entrance 600ms ease-out both;
+}
+
+.hero-entrance-1 {
+  animation-delay: 80ms;
+}
+
+.hero-entrance-2 {
+  animation-delay: 160ms;
+}
+
+.hero-entrance-3 {
+  animation-delay: 240ms;
+}
+
+.hero-entrance-4 {
+  animation-delay: 320ms;
+}
+
+.hero-entrance-5 {
+  animation-delay: 400ms;
+}
+
+.hero-entrance-6 {
+  animation-delay: 520ms;
+}
+
+.journey-step {
+  animation: journey-step 9s ease-in-out infinite;
+}
+
+.journey-step-1 {
+  animation-delay: 0s;
+}
+
+.journey-step-2 {
+  animation-delay: -3s;
+}
+
+.journey-step-3 {
+  animation-delay: -6s;
+}
+
+.journey-connector {
+  animation: journey-connector 9s ease-in-out infinite;
+}
+
+.journey-connector-1 {
+  animation-delay: -1.5s;
+}
+
+.journey-connector-2 {
+  animation-delay: -4.5s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -107,5 +202,11 @@ input:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .hero-entrance,
+  .journey-step,
+  .journey-connector {
+    animation: none;
   }
 }
