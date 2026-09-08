@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { HeroSection } from '@/components/common/HeroSection'
+import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
@@ -16,7 +17,15 @@ const routePlaceholders = [
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<HeroSection />} />
+      <Route
+        path="/"
+        element={
+          <>
+            <HeroSection />
+            <ValuePropositionSection />
+          </>
+        }
+      />
       {routePlaceholders.map((route) => (
         <Route
           key={route.path}
