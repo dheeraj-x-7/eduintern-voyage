@@ -194,6 +194,41 @@ input:focus-visible {
   animation-delay: -4.5s;
 }
 
+@keyframes journey-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.journey-reveal {
+  opacity: 1;
+}
+
+.journey-reveal-visible {
+  animation: journey-reveal 500ms ease-out both;
+}
+
+.journey-reveal-1 {
+  animation-delay: 0ms;
+}
+
+.journey-reveal-2 {
+  animation-delay: 90ms;
+}
+
+.journey-reveal-3 {
+  animation-delay: 180ms;
+}
+
+.journey-reveal-4 {
+  animation-delay: 270ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -206,7 +241,8 @@ input:focus-visible {
 
   .hero-entrance,
   .journey-step,
-  .journey-connector {
+  .journey-connector,
+  .journey-reveal-visible {
     animation: none;
   }
 }

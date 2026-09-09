@@ -3,6 +3,7 @@ import { AcademicSection } from '@/components/common/AcademicSection'
 import { CareerOpportunitiesSection } from '@/components/common/CareerOpportunitiesSection'
 import { HeroSection } from '@/components/common/HeroSection'
 import { LearningResourcesSection } from '@/components/common/LearningResourcesSection'
+import { StudentJourneySection } from '@/components/common/StudentJourneySection'
 import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
@@ -29,6 +30,7 @@ export function AppRoutes() {
             <AcademicSection />
             <LearningResourcesSection />
             <CareerOpportunitiesSection />
+            <StudentJourneySection />
           </>
         }
       />
