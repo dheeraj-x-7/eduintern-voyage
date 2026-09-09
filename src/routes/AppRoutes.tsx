@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { AcademicSection } from '@/components/common/AcademicSection'
+import { CareerOpportunitiesSection } from '@/components/common/CareerOpportunitiesSection'
 import { HeroSection } from '@/components/common/HeroSection'
 import { LearningResourcesSection } from '@/components/common/LearningResourcesSection'
 import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
@@ -27,6 +28,7 @@ export function AppRoutes() {
             <ValuePropositionSection />
             <AcademicSection />
             <LearningResourcesSection />
+            <CareerOpportunitiesSection />
           </>
         }
       />
