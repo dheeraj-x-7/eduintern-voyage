@@ -6,10 +6,10 @@ import { HeroSection } from '@/components/common/HeroSection'
 import { LearningResourcesSection } from '@/components/common/LearningResourcesSection'
 import { StudentJourneySection } from '@/components/common/StudentJourneySection'
 import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
+import { AcademicsPage } from '@/pages/AcademicsPage'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
-  { path: '/academics', title: 'Academics' },
   { path: '/academics/:program', title: 'Academic program' },
   { path: '/academics/:program/semester/:semester', title: 'Academic semester' },
   {
@@ -46,6 +46,7 @@ export function AppRoutes() {
           </>
         }
       />
+      <Route path="/academics" element={<AcademicsPage />} />
       {routePlaceholders.map((route) => (
         <Route
           key={route.path}
