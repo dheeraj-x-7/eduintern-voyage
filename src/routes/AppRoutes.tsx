@@ -10,6 +10,16 @@ import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
   { path: '/academics', title: 'Academics' },
+  { path: '/academics/:program', title: 'Academic program' },
+  { path: '/academics/:program/semester/:semester', title: 'Academic semester' },
+  {
+    path: '/academics/:program/semester/:semester/subject/:subject',
+    title: 'Academic subject',
+  },
+  {
+    path: '/academics/:program/semester/:semester/subject/:subject/unit/:unit',
+    title: 'Academic unit',
+  },
   { path: '/courses', title: 'Courses' },
   { path: '/internships', title: 'Internships' },
   { path: '/about', title: 'About EduIntern Voyage' },
