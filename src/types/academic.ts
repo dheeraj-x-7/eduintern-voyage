@@ -24,6 +24,7 @@ export interface Subject {
   id: string
   slug: string
   title: string
+  description?: string
   semesterId: string
   units: Unit[]
 }

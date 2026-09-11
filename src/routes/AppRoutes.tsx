@@ -7,11 +7,11 @@ import { LearningResourcesSection } from '@/components/common/LearningResourcesS
 import { StudentJourneySection } from '@/components/common/StudentJourneySection'
 import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
 import { AcademicsPage } from '@/pages/AcademicsPage'
+import { SemesterPage } from '@/pages/SemesterPage'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
   { path: '/academics/:program', title: 'Academic program' },
-  { path: '/academics/:program/semester/:semester', title: 'Academic semester' },
   {
     path: '/academics/:program/semester/:semester/subject/:subject',
     title: 'Academic subject',
@@ -47,6 +47,7 @@ export function AppRoutes() {
         }
       />
       <Route path="/academics" element={<AcademicsPage />} />
+      <Route path="/academics/:program/semester/:semester" element={<SemesterPage />} />
       {routePlaceholders.map((route) => (
         <Route
           key={route.path}
