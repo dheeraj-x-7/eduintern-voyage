@@ -9,14 +9,11 @@ import { ValuePropositionSection } from '@/components/common/ValuePropositionSec
 import { AcademicsPage } from '@/pages/AcademicsPage'
 import { SemesterPage } from '@/pages/SemesterPage'
 import { SubjectPage } from '@/pages/SubjectPage'
+import { UnitPage } from '@/pages/UnitPage'
 import { PlaceholderPage } from '@/routes/PlaceholderPage'
 
 const routePlaceholders = [
   { path: '/academics/:program', title: 'Academic program' },
-  {
-    path: '/academics/:program/semester/:semester/subject/:subject/unit/:unit',
-    title: 'Academic unit',
-  },
   { path: '/courses', title: 'Courses' },
   { path: '/internships', title: 'Internships' },
   { path: '/about', title: 'About EduIntern Voyage' },
@@ -48,6 +45,10 @@ export function AppRoutes() {
       <Route
         path="/academics/:program/semester/:semester/subject/:subject"
         element={<SubjectPage />}
+      />
+      <Route
+        path="/academics/:program/semester/:semester/subject/:subject/unit/:unit"
+        element={<UnitPage />}
       />
       {routePlaceholders.map((route) => (
         <Route
