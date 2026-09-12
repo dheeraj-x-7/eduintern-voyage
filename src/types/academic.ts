@@ -7,7 +7,9 @@ export interface LearningMaterial {
   slug: string
   title: string
   kind: LearningMaterialKind
-  access: LearningMaterialAccess
+  accessLevel: LearningMaterialAccess
+  url?: string
+  label?: string
   description?: string
   unitId: string
 }
