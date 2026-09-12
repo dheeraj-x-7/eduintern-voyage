@@ -7,6 +7,8 @@ import { LearningResourcesSection } from '@/components/common/LearningResourcesS
 import { StudentJourneySection } from '@/components/common/StudentJourneySection'
 import { ValuePropositionSection } from '@/components/common/ValuePropositionSection'
 import { AcademicsPage } from '@/pages/AcademicsPage'
+import { LoginPage } from '@/pages/LoginPage'
+import { RegisterPage } from '@/pages/RegisterPage'
 import { SemesterPage } from '@/pages/SemesterPage'
 import { SubjectPage } from '@/pages/SubjectPage'
 import { UnitPage } from '@/pages/UnitPage'
@@ -18,8 +20,6 @@ const routePlaceholders = [
   { path: '/internships', title: 'Internships' },
   { path: '/about', title: 'About EduIntern Voyage' },
   { path: '/contact', title: 'Contact' },
-  { path: '/login', title: 'Login' },
-  { path: '/register', title: 'Register' },
   { path: '/dashboard', title: 'Dashboard' },
 ]
 
@@ -41,6 +41,8 @@ export function AppRoutes() {
         }
       />
       <Route path="/academics" element={<AcademicsPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
       <Route path="/academics/:program/semester/:semester" element={<SemesterPage />} />
       <Route
         path="/academics/:program/semester/:semester/subject/:subject"
